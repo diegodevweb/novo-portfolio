@@ -1,81 +1,51 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
-      <q-toolbar>
-        <q-btn flat dense round icon="menu" aria-label="Menu" @click="toggleLeftDrawer" />
+  <q-layout view="hHh lpR fFf">
+    <q-header elevated class="bg-dark text-white">
+      <q-toolbar class="q-px-xl">
+        <q-toolbar-title class="text-weight-bold">
+          Diego Rodrigues
+        </q-toolbar-title>
 
-        <q-toolbar-title> Quasar App </q-toolbar-title>
-
-        <div>Quasar v{{ $q.version }}</div>
+        <div class="row items-center q-gutter-sm gt-sm">
+          <q-btn flat label="Início" @click="scrollTo('hero')" />
+          <q-btn flat label="Sobre" @click="scrollTo('about')" />
+          <q-btn flat label="Experiência" @click="scrollTo('experience')" />
+          <q-btn flat label="Projetos" @click="scrollTo('projects')" />
+          <q-btn flat label="Skills" @click="scrollTo('skills')" />
+          <q-btn flat label="Contato" @click="scrollTo('contact')" />
+        </div>
       </q-toolbar>
     </q-header>
 
-    <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
-      <q-list>
-        <q-item-label header> Essential Links </q-item-label>
-
-        <EssentialLink v-for="link in linksList" :key="link.title" v-bind="link" />
-      </q-list>
-    </q-drawer>
-
     <q-page-container>
-      <router-view />
+      <q-page padding class="bg-grey-10 text-grey-1">
+        <HeroSection id="hero" />
+        <AboutSection id="about" class="q-mt-xl" />
+        <ExperienceSection id="experience" class="q-mt-xl" />
+        <ProjectsSection id="projects" class="q-mt-xl" />
+        <SkillsSection id="skills" class="q-mt-xl" />
+        <ContactSection id="contact" class="q-mt-xl q-mb-xl" />
+      </q-page>
     </q-page-container>
   </q-layout>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import EssentialLink, { type EssentialLinkProps } from 'components/EssentialLink.vue';
+import { scroll } from 'quasar'
+import HeroSection from 'src/components/HeroSection.vue'
+import AboutSection from 'src/components/AboutSection.vue'
+import ExperienceSection from 'src/components/ExperienceSection.vue'
+import ProjectsSection from 'src/components/ProjectsSection.vue'
+import SkillsSection from 'src/components/SkillsSection.vue'
+import ContactSection from 'src/components/ContactSection.vue'
 
-const linksList: EssentialLinkProps[] = [
-  {
-    title: 'Docs',
-    caption: 'quasar.dev',
-    icon: 'school',
-    link: 'https://quasar.dev',
-  },
-  {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
-    icon: 'code',
-    link: 'https://github.com/quasarframework',
-  },
-  {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
-    icon: 'chat',
-    link: 'https://chat.quasar.dev',
-  },
-  {
-    title: 'Forum',
-    caption: 'forum.quasar.dev',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev',
-  },
-  {
-    title: 'Twitter',
-    caption: '@quasarframework',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev',
-  },
-  {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev',
-  },
-  {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev',
-  },
-];
+const { setVerticalScrollPosition } = scroll
 
-const leftDrawerOpen = ref(false);
+const scrollTo = (targetId: string) => {
+  const el = document.getElementById(targetId)
+  if (!el) return
 
-function toggleLeftDrawer() {
-  leftDrawerOpen.value = !leftDrawerOpen.value;
+  const pageOffset = el.offsetTop - 70 // descontar header
+  setVerticalScrollPosition(window, pageOffset, 400)
 }
 </script>
