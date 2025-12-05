@@ -92,7 +92,7 @@
               <div class="text-center q-mb-lg">
                 <div class="avatar-container">
                   <q-avatar size="120px" class="avatar-main">
-                    <img src="src/assets/perfil1.jpg" alt="Diego Rodrigues">
+                    <img src="/perfil1.jpg" alt="Diego Rodrigues">
                   </q-avatar>
                   <div class="avatar-ring"></div>
                   <div class="status-badge bg-positive">
