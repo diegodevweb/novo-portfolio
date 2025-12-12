@@ -118,7 +118,7 @@
                     </q-avatar>
                   </q-item-section>
                   <q-item-section>
-                    <q-item-label class="text-weight-medium">50+ projetos</q-item-label>
+                    <q-item-label class="text-weight-medium">20+ projetos</q-item-label>
                     <q-item-label caption class="text-grey-4">Entregues com sucesso</q-item-label>
                   </q-item-section>
                 </q-item>
