@@ -3,10 +3,10 @@
     <div class="container">
       <!-- Section Header -->
       <div class="text-center q-mb-xl" data-aos="fade-up">
-        <div class="text-overline text-primary text-weight-bold">Trajetória</div>
+        <div class="text-h5 text-primary text-weight-bold">Trajetória</div>
         <h2 class="text-h3 text-weight-bold q-mb-sm">Experiência Profissional</h2>
         <p class="text-body1 text-grey-4" style="max-width: 600px; margin: 0 auto;">
-          +3 anos construindo soluções em diferentes segmentos e desafios
+          +4 anos construindo soluções em diferentes segmentos e desafios
         </p>
       </div>
 
@@ -231,9 +231,38 @@ const jobs = [
     ]
   },
   {
+    title: 'Fullstack Developer',
+    company: 'BetSolve',
+    period: '2025 (Part-time)',
+    current: false,
+    icon: 'sports_esports',
+    color: 'green-7',
+    description: 'Atuação no desenvolvimento de plataforma de apostas esportivas e jogos online . ' +
+      'Coordenação de equipe, implementação de sistemas transacionais com alto volume, processamento ' +
+      'de pagamentos e gestão de prêmios.',
+    achievements: [
+      'Liderei equipe de 3 desenvolvedores coordenando sprints e entregas',
+      'Implementei integração completa com gateways de pagamento (webhooks, callbacks)',
+      'Desenvolvi sistema de gestão de prêmios e saques com auditoria completa',
+      'Criei arquitetura para jogos digitais com alta disponibilidade',
+      'Implementei boas práticas de segurança seguindo diretrizes OWASP'
+    ],
+    technologies: [
+      { name: 'Laravel 11', color: 'red-8', icon: null },
+      { name: 'Lúmen', color: 'red-6', icon: null },
+      { name: 'PHP 8.2', color: 'purple-7', icon: null },
+      { name: 'Alpine', color: 'orange-6', icon: null },
+      { name: 'React', color: 'blue-8', icon: null },
+      { name: 'Vue.js', color: 'green-7', icon: null },
+      { name: 'MySql', color: 'blue-7', icon: null },
+      { name: 'Redis', color: 'red-7', icon: null },
+      { name: 'Payment APIs', color: 'green-8', icon: null }
+    ]
+  },
+  {
     title: 'Full Stack Developer',
     company: 'Attimo Soluções',
-    period: '2024 - 2025',
+    period: '2024 - 2025 (Part-time)',
     current: false,
     icon: 'work',
     color: 'primary',
@@ -255,59 +284,7 @@ const jobs = [
     ]
   },
   {
-    title: 'Líder Técnico',
-    company: 'BetSolve',
-    period: '2025',
-    current: false,
-    icon: 'sports_esports',
-    color: 'green-7',
-    description: 'Liderança técnica no desenvolvimento de plataforma de apostas esportivas e jogos online . Coordenação de equipe, implementação de sistemas transacionais com alto volume, processamento de pagamentos e gestão de prêmios.',
-    achievements: [
-      'Liderei equipe de 3 desenvolvedores coordenando sprints e entregas',
-      'Implementei integração completa com gateways de pagamento (webhooks, callbacks)',
-      'Desenvolvi sistema de gestão de prêmios e saques com auditoria completa',
-      'Criei arquitetura para jogos digitais com alta disponibilidade',
-      'Implementei boas práticas de segurança seguindo diretrizes OWASP'
-    ],
-    technologies: [
-      { name: 'Laravel 11', color: 'red-8', icon: null },
-      { name: 'Lúmen', color: 'red-6', icon: null },
-      { name: 'PHP 8.2', color: 'purple-7', icon: null },
-      { name: 'Alpine', color: 'orange-6', icon: null },
-      { name: 'React', color: 'blue-8', icon: null },
-      { name: 'Vue.js', color: 'green-7', icon: null },
-      { name: 'MySql', color: 'blue-7', icon: null },
-      { name: 'Redis', color: 'red-7', icon: null },
-      { name: 'Payment APIs', color: 'green-8', icon: null }
-    ]
-  },
-  {
-    title: 'Desenvolvedor Backend',
-    company: 'Grupo Águia',
-    period: 'Out/2023 - Ago/2024',
-    current: false,
-    icon: 'api',
-    color: 'blue-7',
-    description: 'Desenvolvimento backend para aplicativos mobile com Laravel. Criação de APIs REST documentadas com Swagger, implementação de cronjobs, listeners para automação e sistema de notificações em tempo real. Trabalho em sprints ágeis com foco em qualidade.',
-    achievements: [
-      'Desenvolvi APIs REST completas documentadas com Swagger/OpenAPI',
-      'Implementei sistema de notificações push em tempo real',
-      'Criei cronjobs e listeners para automação de processos de negócio',
-      'Implementei autenticação JWT com refresh tokens',
-      'Participei ativamente de code reviews e pair programming'
-    ],
-    technologies: [
-      { name: 'Laravel', color: 'red-8', icon: null },
-      { name: 'APIs REST', color: 'blue-7', icon: null },
-      { name: 'Swagger', color: 'green-8', icon: null },
-      { name: 'MySQL', color: 'blue-8', icon: null },
-      { name: 'JWT', color: 'purple-7', icon: null },
-      { name: 'JIRA', color: 'blue-6', icon: null },
-      { name: 'Payment APIs', color: 'green-8', icon: null }
-    ]
-  },
-  {
-    title: 'Desenvolvedor Full Stack',
+    title: 'Full Stack Developer',
     company: 'ProScore',
     period: 'Ago/2024 - Set/2025',
     current: false,
@@ -340,28 +317,74 @@ const jobs = [
     ]
   },
   {
-    title: 'Desenvolvedor Full Stack',
-    company: 'Tevah Solutions',
-    period: '2020 - Atual',
-    current: true,
-    icon: 'business',
-    color: 'primary',
-    description: 'Negócio próprio desenvolvendo projetos web sob demanda. Criação de aplicações personalizadas, integrações com meios de pagamento, automação de processos internos e desenvolvimento de sistemas para clientes de pequeno e médio porte.',
+    title: 'Backend Developer',
+    company: 'Grupo Águia',
+    period: 'Out/2023 - Ago/2024',
+    current: false,
+    icon: 'api',
+    color: 'blue-7',
+    description: 'Desenvolvimento backend para aplicativos mobile com Laravel. Criação de APIs REST documentadas com Swagger, implementação de cronjobs, listeners para automação e sistema de notificações em tempo real. Trabalho em sprints ágeis com foco em qualidade.',
     achievements: [
-      'Desenvolvi 20+ projetos para diferentes clientes e segmentos',
-      'Criei integrações com diversos gateways de pagamento',
-      'Implementei automações que reduziram trabalho manual em até 80%',
-      'Mantive taxa de satisfação de clientes acima de 95%'
+      'Desenvolvi APIs REST completas documentadas com Swagger/OpenAPI',
+      'Implementei sistema de notificações push em tempo real',
+      'Criei cronjobs e listeners para automação de processos de negócio',
+      'Implementei autenticação JWT com refresh tokens',
+      'Participei ativamente de code reviews e pair programming'
     ],
     technologies: [
       { name: 'Laravel', color: 'red-8', icon: null },
-      { name: 'Vue.js', color: 'green-7', icon: null },
-      { name: 'Quasar', color: 'blue-7', icon: null },
-      { name: 'PostgreSQL', color: 'blue-7', icon: null },
-      { name: 'Docker', color: 'blue-6', icon: null },
-      { name: 'Payment APIs', color: 'green-8', icon: null },
+      { name: 'APIs REST', color: 'blue-7', icon: null },
+      { name: 'Swagger', color: 'green-8', icon: null },
+      { name: 'MySQL', color: 'blue-8', icon: null },
+      { name: 'JWT', color: 'purple-7', icon: null },
+      { name: 'JIRA', color: 'blue-6', icon: null },
+      { name: 'Payment APIs', color: 'green-8', icon: null }
     ]
+  },
+  {
+    title: 'Fullstack Developer',
+    company: 'Freelancer',
+    period: '2022',
+    current: false,
+    icon: 'laptop_mac',
+    color: 'grey-7',
+    description: 'Atuação como freelancer desenvolvendo projetos web sob demanda. ' +
+      'Criação de aplicações personalizadas, landing pages e sites para clientes de pequeno ' +
+      'e médio porte.',
+    achievements: [],
+    technologies: [
+      { name: 'Laravel', color: 'red-8', icon: null },
+      { name: 'Html', color: 'green-7', icon: null },
+      { name: 'CSS', color: 'purple-7', icon: null },
+      { name: 'JavaScript', color: 'orange-7', icon: null },
+      { name: 'PHP', color: 'blue-8', icon: null },
+      { name: 'WordPress', color: 'blue-7', icon: null },
+    ]
+
   }
+  // {
+  //   title: 'Desenvolvedor Full Stack',
+  //   company: 'Tevah Solutions',
+  //   period: '2020 - Atual',
+  //   current: true,
+  //   icon: 'business',
+  //   color: 'primary',
+  //   description: 'Negócio próprio desenvolvendo projetos web sob demanda. Criação de aplicações personalizadas, integrações com meios de pagamento, automação de processos internos e desenvolvimento de sistemas para clientes de pequeno e médio porte.',
+  //   achievements: [
+  //     'Desenvolvi 20+ projetos para diferentes clientes e segmentos',
+  //     'Criei integrações com diversos gateways de pagamento',
+  //     'Implementei automações que reduziram trabalho manual em até 80%',
+  //     'Mantive taxa de satisfação de clientes acima de 95%'
+  //   ],
+  //   technologies: [
+  //     { name: 'Laravel', color: 'red-8', icon: null },
+  //     { name: 'Vue.js', color: 'green-7', icon: null },
+  //     { name: 'Quasar', color: 'blue-7', icon: null },
+  //     { name: 'PostgreSQL', color: 'blue-7', icon: null },
+  //     { name: 'Docker', color: 'blue-6', icon: null },
+  //     { name: 'Payment APIs', color: 'green-8', icon: null },
+  //   ]
+  // }
 ]
 
 const technicalSkills = [
@@ -374,7 +397,6 @@ const technicalSkills = [
 ]
 
 const softSkills = [
-  'Liderança técnica de equipes',
   'Metodologias ágeis (SCRUM)',
   'Comunicação com stakeholders',
   'Trabalho remoto autônomo',

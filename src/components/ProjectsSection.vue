@@ -3,7 +3,7 @@
     <div class="container">
       <!-- Section Header -->
       <div class="text-center q-mb-xl" data-aos="fade-up">
-        <div class="text-overline text-primary text-weight-bold">Portfolio</div>
+        <div class="text-h5 text-primary text-weight-bold">Portfolio</div>
         <h2 class="text-h3 text-weight-bold q-mb-sm">Projetos em Destaque</h2>
         <p class="text-body1 text-grey-4" style="max-width: 600px; margin: 0 auto;">
           Seleção de projetos complexos que demonstram expertise técnica e impacto real

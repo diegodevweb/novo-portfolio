@@ -3,7 +3,7 @@
     <div class="container">
       <!-- Section Header -->
       <div class="text-center q-mb-xl" data-aos="fade-up">
-        <div class="text-overline text-primary text-weight-bold">Conheça mais</div>
+        <div class="text-h5 text-primary text-weight-bold">Conheça mais</div>
         <h2 class="text-h3 text-weight-bold q-mb-sm">Sobre mim</h2>
         <p class="text-body1 text-grey-4" style="max-width: 600px; margin: 0 auto;">
           Mais de 3 anos transformando ideias em sistemas que funcionam
@@ -94,7 +94,7 @@
                     </q-avatar>
                   </q-item-section>
                   <q-item-section>
-                    <q-item-label class="text-weight-medium">+3 anos</q-item-label>
+                    <q-item-label class="text-weight-medium">+4 anos</q-item-label>
                     <q-item-label caption class="text-grey-4">Desenvolvimento Web</q-item-label>
                   </q-item-section>
                 </q-item>
@@ -114,11 +114,11 @@
                 <q-item class="q-px-none">
                   <q-item-section avatar>
                     <q-avatar color="blue-7" text-color="white" size="40px">
-                      <q-icon name="code_blocks" />
+                      <q-icon name="laptop" />
                     </q-avatar>
                   </q-item-section>
                   <q-item-section>
-                    <q-item-label class="text-weight-medium">20+ projetos</q-item-label>
+                    <q-item-label class="text-weight-medium">15+ projetos</q-item-label>
                     <q-item-label caption class="text-grey-4">Entregues com sucesso</q-item-label>
                   </q-item-section>
                 </q-item>
@@ -227,8 +227,8 @@ const specialties = [
 ]
 
 const stats = [
-  { icon: 'workspace_premium', value: '3+', label: 'Anos de experiência', color: 'primary' },
-  { icon: 'code', value: '20+', label: 'Projetos entregues', color: 'green-7' },
+  { icon: 'workspace_premium', value: '4+', label: 'Anos de experiência', color: 'primary' },
+  { icon: 'code', value: '15+', label: 'Projetos entregues', color: 'green-7' },
   { icon: 'business', value: '5+', label: 'Empresas', color: 'blue-7' },
   { icon: 'integration_instructions', value: '20+', label: 'Integrações', color: 'orange-7' }
 ]

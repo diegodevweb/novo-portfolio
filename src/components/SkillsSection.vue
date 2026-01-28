@@ -3,7 +3,7 @@
     <div class="container">
       <!-- Section Header -->
       <div class="text-center q-mb-xl" data-aos="fade-up">
-        <div class="text-overline text-primary text-weight-bold">Competências</div>
+        <div class="text-h5 text-primary text-weight-bold">Competências</div>
         <h2 class="text-h3 text-weight-bold q-mb-sm">Skills & Tecnologias</h2>
         <p class="text-body1 text-grey-4" style="max-width: 600px; margin: 0 auto;">
           Ferramentas e tecnologias que domino para criar soluções completas
@@ -325,7 +325,6 @@ const learning = [
 ]
 
 const softSkills = [
-  { name: 'Liderança Técnica', icon: 'groups', color: 'blue', description: 'Coordenação de equipes' },
   { name: 'Comunicação', icon: 'chat', color: 'green', description: 'Stakeholders e clientes' },
   { name: 'Resolução de Problemas', icon: 'lightbulb', color: 'orange', description: 'Soluções criativas' },
   { name: 'Metodologias Ágeis', icon: 'speed', color: 'purple', description: 'SCRUM e Kanban' },
