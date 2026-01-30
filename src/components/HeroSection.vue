@@ -133,9 +133,6 @@
                 <p class="text-body2 text-grey-3 q-mb-xs">
                   🏢 <strong>Claro</strong> - Full Stack Developer
                 </p>
-                <p class="text-body2 text-grey-3">
-                  💼 <strong>Tevah Solutions</strong> - Projetos sob demanda
-                </p>
               </div>
 
               <q-separator class="q-my-md" dark />
@@ -199,7 +196,7 @@ defineProps({
   }
 })
 
-const cvLink = '/cv_atualizado.pdf'
+const cvLink = '/curriculo.pdf'
 const linkedinLink = 'https://www.linkedin.com/in/diego-rodrigues-500b0081/'
 const githubLink = 'https://github.com/diegodevweb'
 
