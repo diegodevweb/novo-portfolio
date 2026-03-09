@@ -164,7 +164,7 @@
               style="padding: 8px 12px;"
             >
               <q-icon name="check_circle" size="16px" class="q-mr-xs" />
-              3+ anos
+              4 anos
             </q-badge>
             <q-badge
               color="positive"
