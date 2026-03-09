@@ -6,7 +6,7 @@
         <div class="text-h5 text-primary text-weight-bold">Trajetória</div>
         <h2 class="text-h3 text-weight-bold q-mb-sm">Experiência Profissional</h2>
         <p class="text-body1 text-grey-4" style="max-width: 600px; margin: 0 auto;">
-          +4 anos construindo soluções em diferentes segmentos e desafios
+          4 anos construindo soluções em diferentes segmentos e desafios
         </p>
       </div>
 
