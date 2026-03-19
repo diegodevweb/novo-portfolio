@@ -196,7 +196,7 @@ defineProps({
   }
 })
 
-const cvLink = '/curriculo.pdf'
+const cvLink = '/diego-rodrigues-fullstack-developer.pdf'
 const linkedinLink = 'https://www.linkedin.com/in/diego-rodrigues-500b0081/'
 const githubLink = 'https://github.com/diegodevweb'
 
