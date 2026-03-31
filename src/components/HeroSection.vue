@@ -27,7 +27,7 @@
           </div>
 
           <p class="text-body1 text-grey-4 q-mb-lg q-mt-md" style="max-width: 600px; line-height: 1.8;">
-            Desenvolvo <strong class="text-white">sistemas web robustos e escaláveis</strong> há mais de 3 anos.
+            Desenvolvo <strong class="text-white">sistemas web robustos e escaláveis</strong> há mais de 4 anos.
             Especializado em integrações complexas (NFe, SEFAZ, APIs), automações,
             filas de processamento e dashboards administrativos que <strong class="text-white">agregam valor ao negócio</strong>.
           </p>
