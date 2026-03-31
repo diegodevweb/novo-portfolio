@@ -6,7 +6,7 @@
         <div class="text-h5 text-primary text-weight-bold">Conheça mais</div>
         <h2 class="text-h3 text-weight-bold q-mb-sm">Sobre mim</h2>
         <p class="text-body1 text-grey-4" style="max-width: 600px; margin: 0 auto;">
-          Mais de 3 anos transformando ideias em sistemas que funcionam
+          Mais de 4 anos transformando ideias em sistemas que funcionam
         </p>
       </div>
 
