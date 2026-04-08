@@ -182,7 +182,7 @@ const strengths = [
   {
     icon: 'hub',
     title: 'Integrações',
-    description: 'APIs REST, SEFAZ, pagamentos e sistemas legados'
+    description: 'APIs REST, pagamentos e sistemas legados'
   }
 ]
 
