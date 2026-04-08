@@ -14,7 +14,7 @@
         <div class="col-12 col-md-7" data-aos="fade-right">
           <div class="text-caption text-primary text-uppercase q-mb-sm text-weight-bold letter-spacing">
             <q-icon name="code" size="16px" class="q-mr-xs" />
-            Full Stack Developer · Laravel & Vue.js
+            Fullstack Developer · Node | Laravel | Vue | React
           </div>
 
           <h1 class="hero-title text-h2 text-weight-bold q-mb-md">
@@ -27,55 +27,30 @@
           </div>
 
           <p class="text-body1 text-grey-4 q-mb-lg q-mt-md" style="max-width: 600px; line-height: 1.8;">
-            Desenvolvo <strong class="text-white">sistemas web robustos e escaláveis</strong> há mais de 4 anos.
-            Especializado em integrações complexas (NFe, SEFAZ, APIs), automações,
-            filas de processamento e dashboards administrativos que <strong class="text-white">agregam valor ao negócio</strong>.
+            Construo <strong class="text-white">arquiteturas backend resilientes</strong> e interfaces que suportam
+            operações críticas.
+            Trabalho com APIs, processamento assíncrono, integrações de sistemas e plataformas escaláveis
+            para entregar valor duradouro aos negócios.
           </p>
 
           <!-- Stats -->
-<!--          <div class="row q-col-gutter-md q-mb-lg">-->
-<!--            <div class="col-auto" v-for="stat in stats" :key="stat.label">-->
-<!--              <div class="stat-card bg-grey-9 rounded-borders q-pa-md text-center">-->
-<!--                <div class="text-h4 text-weight-bold text-primary">{{ stat.value }}</div>-->
-<!--                <div class="text-caption text-grey-4">{{ stat.label }}</div>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
+          <!--          <div class="row q-col-gutter-md q-mb-lg">-->
+          <!--            <div class="col-auto" v-for="stat in stats" :key="stat.label">-->
+          <!--              <div class="stat-card bg-grey-9 rounded-borders q-pa-md text-center">-->
+          <!--                <div class="text-h4 text-weight-bold text-primary">{{ stat.value }}</div>-->
+          <!--                <div class="text-caption text-grey-4">{{ stat.label }}</div>-->
+          <!--              </div>-->
+          <!--            </div>-->
+          <!--          </div>-->
 
           <!-- CTA Buttons -->
           <div class="row q-gutter-md">
-            <q-btn
-              outline
-              color="grey-4"
-              size="lg"
-              label="Baixar CV"
-              icon="picture_as_pdf"
-              :href="cvLink"
-              target="_blank"
-              class="cta-button-secondary"
-            />
-            <q-btn
-              flat
-              round
-              color="grey-4"
-              icon="mdi-linkedin"
-              size="lg"
-              :href="linkedinLink"
-              target="_blank"
-              class="social-button"
-            >
+            <q-btn flat round color="grey-4" icon="mdi-linkedin" size="lg" :href="linkedinLink" target="_blank"
+              class="social-button">
               <q-tooltip>LinkedIn</q-tooltip>
             </q-btn>
-            <q-btn
-              flat
-              round
-              color="grey-4"
-              icon="mdi-github"
-              size="lg"
-              :href="githubLink"
-              target="_blank"
-              class="social-button"
-            >
+            <q-btn flat round color="grey-4" icon="mdi-github" size="lg" :href="githubLink" target="_blank"
+              class="social-button">
               <q-tooltip>GitHub</q-tooltip>
             </q-btn>
           </div>
@@ -97,7 +72,6 @@
                   <div class="avatar-ring"></div>
                   <div class="status-badge bg-positive">
                     <q-icon name="circle" size="8px" />
-<!--                    <span class="q-ml-xs text-caption">Disponível</span>-->
                   </div>
                 </div>
               </div>
@@ -108,14 +82,8 @@
                   Stack Principal
                 </div>
                 <div class="row q-gutter-xs">
-                  <q-chip
-                    v-for="tech in mainStack"
-                    :key="tech.name"
-                    :color="tech.color"
-                    text-color="white"
-                    size="sm"
-                    class="stack-chip"
-                  >
+                  <q-chip v-for="tech in mainStack" :key="tech.name" :color="tech.color" text-color="white" size="sm"
+                    class="stack-chip">
                     <q-icon :name="tech.icon" size="16px" class="q-mr-xs" v-if="tech.icon" />
                     {{ tech.name }}
                   </q-chip>
@@ -158,21 +126,13 @@
 
           <!-- Floating badges -->
           <div class="floating-badges">
-            <q-badge
-              color="primary"
-              class="floating-badge badge-1"
-              style="padding: 8px 12px;"
-            >
+            <q-badge color="primary" class="floating-badge badge-1" style="padding: 8px 12px;">
               <q-icon name="check_circle" size="16px" class="q-mr-xs" />
               4 anos
             </q-badge>
-            <q-badge
-              color="positive"
-              class="floating-badge badge-2"
-              style="padding: 8px 12px;"
-            >
+            <q-badge color="positive" class="floating-badge badge-2" style="padding: 8px 12px;">
               <q-icon name="code" size="16px" class="q-mr-xs" />
-              Laravel Expert
+              Backend Specialist
             </q-badge>
           </div>
         </div>
@@ -180,7 +140,7 @@
     </div>
 
     <!-- Scroll indicator -->
-    <div class="scroll-indicator" @click="$emit('scrollTo', 'about')">
+    <div class="scroll-indicator" @click="scrollToSection('about')">
       <q-icon name="keyboard_arrow_down" size="32px" class="scroll-arrow" />
     </div>
   </section>
@@ -196,25 +156,26 @@ defineProps({
   }
 })
 
-const cvLink = '/diego-rodrigues-fullstack-developer.pdf'
 const linkedinLink = 'https://www.linkedin.com/in/diego-rodrigues-500b0081/'
 const githubLink = 'https://github.com/diegodevweb'
 
 const mainStack = [
-  { name: 'Laravel', color: 'red-8', icon: null },
-  { name: 'Vue 2/3', color: 'green-7', icon: null },
-  { name: 'Git', color: 'blue-7', icon: null },
-  { name: 'PostgreSQL', color: 'blue-9', icon: null },
+  { name: 'Node / Laravel', color: 'red-8', icon: null },
+  { name: 'Vue', color: 'green-7', icon: null },
+  { name: 'React', color: 'blue-7', icon: null },
+  { name: 'MySql', color: 'cyan-7', icon: null },
+  { name: 'Postgres', color: 'orange-9', icon: null },
   { name: 'Docker', color: 'blue-6', icon: null },
-  { name: 'Redis', color: 'red-7', icon: null }
+  { name: 'Redis', color: 'red-7', icon: null },
+  { name: 'CI/CD', color: 'purple-9', icon: null },
 ]
 
 // Typing effect
 const texts = [
   'Desenvolvedor Fullstack',
-  'Especialista em Laravel & Vue.js',
-  'Integrações complexas e APIs',
-  'De sites a sistemas empresariais',
+  'Engenharia de backend e APIs',
+  'Sistemas escaláveis e resilientes',
+  'Códigos que suportam operações críticas',
 ]
 const typingText = ref('')
 let textIndex = 0
@@ -259,6 +220,13 @@ const getParticleStyle = () => {
   }
 }
 
+const scrollToSection = (targetId: string) => {
+  const target = document.getElementById(targetId)
+  if (!target) return
+  const offsetTop = target.offsetTop - 70
+  window.scrollTo({ top: offsetTop, behavior: 'smooth' })
+}
+
 onMounted(() => {
   typeEffect()
 })
@@ -296,6 +264,7 @@ onMounted(() => {
   0% {
     background-position: 0 0;
   }
+
   100% {
     background-position: 50px 50px;
   }
@@ -317,16 +286,21 @@ onMounted(() => {
 }
 
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0) translateX(0);
     opacity: 0;
   }
+
   10% {
     opacity: 1;
   }
+
   90% {
     opacity: 1;
   }
+
   100% {
     transform: translateY(-100vh) translateX(50px);
     opacity: 0;
@@ -363,10 +337,14 @@ onMounted(() => {
 }
 
 @keyframes blink {
-  0%, 49% {
+
+  0%,
+  49% {
     opacity: 1;
   }
-  50%, 100% {
+
+  50%,
+  100% {
     opacity: 0;
   }
 }
@@ -451,6 +429,7 @@ onMounted(() => {
   0% {
     filter: hue-rotate(0deg);
   }
+
   100% {
     filter: hue-rotate(360deg);
   }
@@ -547,9 +526,12 @@ onMounted(() => {
 }
 
 @keyframes floatBadge {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-10px);
   }
@@ -576,12 +558,19 @@ onMounted(() => {
 }
 
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(0);
   }
+
   40% {
     transform: translateY(-10px);
   }
+
   60% {
     transform: translateY(-5px);
   }

@@ -15,36 +15,29 @@
         <div class="col-12 col-md-7" data-aos="fade-right">
           <div class="about-content">
             <p class="text-body1 text-grey-3 q-mb-md" style="line-height: 1.8;">
-              Sou desenvolvedor <strong class="text-white">Full Stack</strong> especializado em resolver
-              problemas complexos através de código. Minha especialidade é criar sistemas que vão além
-              de simples websites: <strong class="text-primary">ERPs, plataformas transacionais,
-              integrações fiscais e dashboards administrativos</strong> que realmente fazem diferença
-              no dia a dia das empresas.
+              Sou desenvolvedor <strong class="text-white">backend e fullstack</strong> focado em resolver
+              problemas complexos com arquitetura de software e implementações consistentes.
+              Crio soluções que vão além de interfaces, como <strong class="text-primary">APIs robustas, pipelines de
+                dados,
+                automações e sistemas corporativos</strong> que suportam operações de alto impacto.
             </p>
 
             <p class="text-body1 text-grey-3 q-mb-md" style="line-height: 1.8;">
-              Trabalho com <strong class="text-white">Laravel</strong> no back-end e
-              <strong class="text-white">Vue.js</strong> no front-end, sempre focado em
+              Trabalho com <strong class="text-white">Node / Laravel</strong> no backend,
+              <strong class="text-white">Vue.js</strong> e <strong class="text-white">React.js</strong> no frontend, sempre com foco em
               <strong class="text-primary">performance, segurança e manutenibilidade</strong>.
-              Tenho experiência desde a modelagem de banco de dados até a criação de interfaces
-              ricas e responsivas.
+              Minhas entregas envolvem modelagem de dados, APIs escaláveis e integração entre serviços.
             </p>
 
             <p class="text-body1 text-grey-3 q-mb-lg" style="line-height: 1.8;">
-              Já atuei em projetos desafiadores como <strong class="text-white">emissão de notas
-              fiscais eletrônicas (NFe/NFC-e)</strong>, automação com web scraping, plataformas de
-              jogos online, e sistemas multi-empresa com integrações complexas.
+              Já atuei em projetos desafiadores como <strong class="text-white">plataformas transacionais, automações de
+                alto volume</strong>,
+              integração com sistemas legados e soluções de gestão para empresas com requisitos críticos.
             </p>
-
             <!-- Key strengths -->
             <div class="strengths-grid q-mb-lg">
-              <div
-                v-for="(strength, index) in strengths"
-                :key="index"
-                class="strength-item"
-                data-aos="fade-up"
-                :data-aos-delay="index * 100"
-              >
+              <div v-for="(strength, index) in strengths" :key="index" class="strength-item" data-aos="fade-up"
+                :data-aos-delay="index * 100">
                 <q-icon :name="strength.icon" size="32px" class="text-primary q-mb-sm" />
                 <div class="text-subtitle2 text-weight-bold q-mb-xs">{{ strength.title }}</div>
                 <div class="text-caption text-grey-4">{{ strength.description }}</div>
@@ -64,14 +57,10 @@
               </div>
 
               <div class="stack-list">
-                <div
-                  v-for="(item, index) in mainStack"
-                  :key="index"
-                  class="stack-item"
-                >
+                <div v-for="(item, index) in mainStack" :key="index" class="stack-item">
                   <div class="row items-center justify-between">
                     <div class="text-body2 text-weight-medium">{{ item.name }}</div>
-                    <q-badge :color="item.color"/>
+                    <q-badge :color="item.color" />
                   </div>
                 </div>
               </div>
@@ -107,7 +96,7 @@
                   </q-item-section>
                   <q-item-section>
                     <q-item-label class="text-weight-medium">5+ empresas</q-item-label>
-                    <q-item-label caption class="text-grey-4">Claro, BetSolve, Attimo, etc</q-item-label>
+                    <q-item-label caption class="text-grey-4">Claro, BetSolve, ProScore, etc</q-item-label>
                   </q-item-section>
                 </q-item>
 
@@ -135,14 +124,8 @@
               </div>
 
               <div class="specialties-list">
-                <q-chip
-                  v-for="specialty in specialties"
-                  :key="specialty"
-                  color="grey-8"
-                  text-color="grey-3"
-                  size="md"
-                  class="specialty-chip"
-                >
+                <q-chip v-for="specialty in specialties" :key="specialty" color="grey-8" text-color="grey-3" size="md"
+                  class="specialty-chip">
                   <q-icon name="check_circle" size="16px" class="q-mr-xs text-primary" />
                   {{ specialty }}
                 </q-chip>
@@ -155,11 +138,7 @@
       <!-- Bottom stats section -->
       <div class="stats-section q-mt-xl" data-aos="fade-up">
         <div class="row q-col-gutter-lg text-center">
-          <div
-            v-for="(stat, index) in stats"
-            :key="index"
-            class="col-12 col-sm-6 col-md-3"
-          >
+          <div v-for="(stat, index) in stats" :key="index" class="col-12 col-sm-6 col-md-3">
             <q-card flat class="stat-card bg-grey-9">
               <q-card-section>
                 <q-icon :name="stat.icon" size="48px" :class="`text-${stat.color}`" class="q-mb-sm" />
@@ -208,20 +187,20 @@ const strengths = [
 ]
 
 const mainStack = [
-  { name: 'Laravel / PHP', progress: 0.95, color: 'red-8' },
-  { name: 'Vue.js / Quasar', progress: 0.90, color: 'green-7' },
-  { name: 'PostgreSQL / MySQL', progress: 0.85, color: 'blue-7' },
+  { name: 'Node / Laravel', progress: 0.95, color: 'red-8' },
+  { name: 'APIs & Integrações', progress: 0.90, color: 'blue-7' },
+  { name: 'Dados & Performance', progress: 0.85, color: 'blue-7' },
   { name: 'Docker / Redis', progress: 0.70, color: 'blue-6' },
-  { name: 'Git / CI/CD', progress: 0.80, color: 'orange-7' }
+  { name: 'Git / CI-CD', progress: 0.80, color: 'orange-7' }
 ]
 
 const specialties = [
-  'Integrações NFe/SEFAZ',
   'APIs REST',
+  'Arquitetura de Sistemas',
   'Filas e Jobs',
   'Multi-tenancy',
-  'Web Scraping',
-  'Dashboards Admin',
+  'Automação de Processos',
+  'Dashboards Analíticos',
   'Gateways de Pagamento',
   'Sistemas Transacionais'
 ]

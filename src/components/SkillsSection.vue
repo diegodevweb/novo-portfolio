@@ -5,7 +5,7 @@
       <div class="text-center q-mb-xl" data-aos="fade-up">
         <div class="text-h5 text-primary text-weight-bold">Competências</div>
         <h2 class="text-h3 text-weight-bold q-mb-sm">Skills & Tecnologias</h2>
-        <p class="text-body1 text-grey-4" style="max-width: 600px; margin: 0 auto;">
+        <p class="text-body1 text-grey-4" style="max-width: 600px; margin: 0 auto">
           Ferramentas e tecnologias que domino para criar soluções completas
         </p>
       </div>
@@ -38,7 +38,12 @@
                 >
                   <div class="row items-center justify-between q-mb-xs">
                     <div class="skill-name">
-                      <q-icon :name="skill.icon" size="20px" :class="`text-${skill.color}`" class="q-mr-sm" />
+                      <q-icon
+                        :name="skill.icon"
+                        size="20px"
+                        :class="`text-${skill.color}`"
+                        class="q-mr-sm"
+                      />
                       <span class="text-body1 text-weight-medium">{{ skill.name }}</span>
                     </div>
                   </div>
@@ -75,7 +80,12 @@
                 >
                   <div class="row items-center justify-between q-mb-xs">
                     <div class="skill-name">
-                      <q-icon :name="skill.icon" size="20px" :class="`text-${skill.color}`" class="q-mr-sm" />
+                      <q-icon
+                        :name="skill.icon"
+                        size="20px"
+                        :class="`text-${skill.color}`"
+                        class="q-mr-sm"
+                      />
                       <span class="text-body1 text-weight-medium">{{ skill.name }}</span>
                     </div>
                   </div>
@@ -103,8 +113,12 @@
               </div>
 
               <q-list dense>
-                <q-item v-for="tool in devopsTools" :key="tool.name" class="q-px-none skill-list-item">
-                  <q-item-section avatar style="min-width: 40px;">
+                <q-item
+                  v-for="tool in devopsTools"
+                  :key="tool.name"
+                  class="q-px-none skill-list-item"
+                >
+                  <q-item-section avatar style="min-width: 40px">
                     <q-icon :name="tool.icon" size="24px" :class="`text-${tool.color}`" />
                   </q-item-section>
                   <q-item-section>
@@ -165,7 +179,7 @@
 
               <q-list dense>
                 <q-item v-for="item in learning" :key="item.name" class="q-px-none skill-list-item">
-                  <q-item-section avatar style="min-width: 40px;">
+                  <q-item-section avatar style="min-width: 40px">
                     <q-icon :name="item.icon" size="24px" class="text-orange-7" />
                   </q-item-section>
                   <q-item-section>
@@ -189,11 +203,7 @@
             </div>
 
             <div class="row q-col-gutter-md">
-              <div
-                v-for="(skill) in softSkills"
-                :key="skill.name"
-                class="col-6 col-sm-4 col-md-3"
-              >
+              <div v-for="skill in softSkills" :key="skill.name" class="col-6 col-sm-4 col-md-3">
                 <div class="soft-skill-card text-center">
                   <q-avatar size="64px" :class="`bg-${skill.color}-9`" class="q-mb-sm">
                     <q-icon :name="skill.icon" size="32px" :class="`text-${skill.color}-3`" />
@@ -227,125 +237,150 @@
 defineProps({
   id: {
     type: String,
-    default: 'skills'
-  }
-})
+    default: 'skills',
+  },
+});
 
 const backendSkills = [
   {
-    name: 'PHP / Laravel',
+    name: 'Node.js / Laravel',
     icon: 'code',
     color: 'red-7',
-    description: 'Framework principal, patterns avançados, otimizações'
+    description: 'Engenharia backend com patterns, APIs e serviços escaláveis',
   },
   {
     name: 'APIs REST',
     icon: 'api',
     color: 'blue-7',
-    description: 'Design, documentação, versionamento e segurança'
+    description: 'Design, documentação, versionamento e segurança',
   },
   {
-    name: 'PostgreSQL / MySQL',
+    name: 'SQL / NoSQL',
     icon: 'storage',
     color: 'blue-8',
-    description: 'Modelagem, otimização de queries, índices'
+    description: 'Modelagem de dados, índices e otimização de queries',
   },
   {
     name: 'Redis / Queues',
     icon: 'flash_on',
     color: 'red-8',
-    description: 'Cache, jobs assíncronos, filas de processamento'
+    description: 'Cache, jobs assíncronos e pipelines de processamento',
   },
   {
     name: 'Integrações',
     icon: 'hub',
     color: 'purple-7',
-    description: 'SEFAZ, pagamentos, APIs externas, webhooks'
-  }
-]
+    description: 'APIs externas, webhooks, gateways de pagamento',
+  },
+];
 
 const frontendSkills = [
   {
     name: 'Vue.js 3',
     icon: 'javascript',
     color: 'green-7',
-    description: 'Composition API, componentes reutilizáveis, estado'
+    description: 'Composition API, componentes reutilizáveis e estado moderno',
   },
   {
     name: 'Quasar Framework',
     icon: 'widgets',
     color: 'blue-7',
-    description: 'Componentes, layouts, responsividade'
-  },
-  {
-    name: 'Vuetify',
-    icon: 'palette',
-    color: 'blue-8',
-    description: 'Material Design, components, theming'
-  },
-  {
-    name: 'Alpine.js',
-    icon: 'code',
-    color: 'cyan-7',
-    description: 'Interatividade leve em Blade/Livewire'
+    description: 'Componentes, layouts e experiência responsiva',
   },
   {
     name: 'HTML/CSS/JS',
     icon: 'web',
     color: 'orange-7',
-    description: 'Fundamentos sólidos, responsividade, acessibilidade'
-  }
-]
+    description: 'Fundamentos sólidos para interfaces acessíveis',
+  },
+  {
+    name: 'Alpine.js',
+    icon: 'code',
+    color: 'cyan-7',
+    description: 'Interatividade leve para protótipos e UIs simples',
+  },
+];
 
 const devopsTools = [
   { name: 'Git / GitHub', icon: 'mdi-git', color: 'orange-7', use: 'Versionamento e colaboração' },
   { name: 'Docker', icon: 'mdi-docker', color: 'blue-6', use: 'Containerização e ambientes' },
   { name: 'Linux / Ubuntu', icon: 'terminal', color: 'grey-6', use: 'Servidores e deploy' },
-  { name: 'Composer / NPM', icon: 'terminal', color: 'red-7', use: 'Gerenciamento de dependências' },
-  { name: 'Postman / Swagger', icon: 'description', color: 'orange-6', use: 'Testes e documentação APIs' }
-]
+  { name: 'CI/CD', icon: 'autorenew', color: 'green-7', use: 'GitHub Actions e pipelines automatizados'},
+  {
+    name: 'Composer / NPM',
+    icon: 'terminal',
+    color: 'red-7',
+    use: 'Gerenciamento de dependências',
+  },
+  {
+    name: 'Postman / Swagger',
+    icon: 'description',
+    color: 'orange-6',
+    use: 'Testes e documentação APIs',
+  },
+];
 
 const specialties = [
-  { name: 'NFe/NFC-e', icon: 'receipt_long', color: 'purple-7' },
+  { name: 'APIs corporativas', icon: 'receipt_long', color: 'purple-7' },
   { name: 'Multi-tenancy', icon: 'business', color: 'blue-7' },
-  { name: 'Web Scraping', icon: 'travel_explore', color: 'pink-7' },
+  { name: 'Sistemas integrados', icon: 'travel_explore', color: 'pink-7' },
   { name: 'Payments', icon: 'payment', color: 'green-7' },
   { name: 'Jobs/Queues', icon: 'schedule', color: 'orange-7' },
   { name: 'Dashboards', icon: 'dashboard', color: 'cyan-7' },
   { name: 'Auth/JWT', icon: 'lock', color: 'red-7' },
-  { name: 'Filament', icon: 'admin_panel_settings', color: 'amber-7' }
-]
+  { name: 'Admin panels', icon: 'admin_panel_settings', color: 'amber-7' },
+];
 
 const learning = [
-  { name: 'TypeScript', icon: 'code', reason: 'Tipagem estática para Vue' },
-  { name: 'Testing (PHPUnit)', icon: 'bug_report', reason: 'Testes automatizados' },
-  { name: 'Kafka', icon: 'code', reason: 'Streaming de dados em tempo real' },
-  { name: 'CI/CD', icon: 'sync', reason: 'Deploy automatizado' },
-  { name: 'GraphQL', icon: 'api', reason: 'APIs flexíveis' }
-]
+  {
+    name: 'Testing (Jest)',
+    icon: 'bug_report',
+    reason: 'Garantia de qualidade, isolamento de dependências e cobertura de regras de negócio'
+  },
+  {
+    name: 'Kafka / Event-driven',
+    icon: 'code',
+    reason: 'Sistemas distribuídos, desacoplamento e processamento assíncrono em escala'
+  },
+  {
+    name: 'GraphQL',
+    icon: 'api',
+    reason: 'Controle de consumo de dados e redução de overfetching/underfetching'
+  },
+];
 
 const softSkills = [
   { name: 'Comunicação', icon: 'chat', color: 'green', description: 'Stakeholders e clientes' },
-  { name: 'Resolução de Problemas', icon: 'lightbulb', color: 'orange', description: 'Soluções criativas' },
+  {
+    name: 'Resolução de Problemas',
+    icon: 'lightbulb',
+    color: 'orange',
+    description: 'Soluções criativas',
+  },
   { name: 'Metodologias Ágeis', icon: 'speed', color: 'purple', description: 'SCRUM e Kanban' },
   { name: 'Trabalho Remoto', icon: 'home', color: 'cyan', description: 'Autonomia e disciplina' },
   { name: 'Code Review', icon: 'rate_review', color: 'pink', description: 'Qualidade de código' },
   { name: 'Documentação', icon: 'description', color: 'indigo', description: 'Clara e completa' },
-  { name: 'Mentoria', icon: 'school', color: 'teal', description: 'Ensinar e compartilhar' }
-]
+  { name: 'Mentoria', icon: 'school', color: 'teal', description: 'Ensinar e compartilhar' },
+];
 
 const stats = [
   { icon: 'code', value: '10+', label: 'Tecnologias', color: 'primary' },
   { icon: 'library_books', value: '20+', label: 'Bibliotecas', color: 'blue-7' },
   { icon: 'integration_instructions', value: '15+', label: 'Integrações', color: 'purple-7' },
-  { icon: 'emoji_events', value: '8+', label: 'Especialidades', color: 'orange-7' }
-]
+  { icon: 'emoji_events', value: '8+', label: 'Especialidades', color: 'orange-7' },
+];
 </script>
 
 <style scoped lang="scss">
 .skills-section {
   padding: 80px 0;
-  background: linear-gradient(180deg, rgba(0, 129, 75, 0.02) 0%, transparent 50%, rgba(0, 129, 75, 0.02) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 129, 75, 0.02) 0%,
+    transparent 50%,
+    rgba(0, 129, 75, 0.02) 100%
+  );
 }
 
 .container {

@@ -12,35 +12,18 @@
 
       <!-- Timeline -->
       <q-timeline color="primary" layout="comfortable" class="custom-timeline">
-        <q-timeline-entry
-          v-for="(job, index) in jobs"
-          :key="index"
-          :title="job.title"
-          :subtitle="job.company"
-          :icon="job.icon"
-          :color="job.color"
-          data-aos="fade-up"
-          :data-aos-delay="index * 100"
-        >
+        <q-timeline-entry v-for="(job, index) in jobs" :key="index" :title="job.title" :subtitle="job.company"
+          :icon="job.icon" :color="job.color" data-aos="fade-up" :data-aos-delay="index * 100">
           <template v-slot:subtitle>
             <div class="row items-center q-gutter-sm">
               <div class="text-weight-bold">{{ job.company }}</div>
               <q-separator vertical />
               <div class="text-caption">{{ job.period }}</div>
-              <q-badge
-                v-if="job.current"
-                color="positive"
-                label="Atual"
-                class="q-ml-xs"
-              />
+              <q-badge v-if="job.current" color="positive" label="Atual" class="q-ml-xs" />
             </div>
           </template>
 
-          <q-card
-            flat
-            class="experience-card bg-grey-9"
-            :class="{ 'expanded': expandedCards[index] }"
-          >
+          <q-card flat class="experience-card bg-grey-9" :class="{ 'expanded': expandedCards[index] }">
             <q-card-section>
               <!-- Description -->
               <div class="text-body2 text-grey-3 q-mb-md" style="line-height: 1.7;">
@@ -54,11 +37,7 @@
                   Principais Conquistas
                 </div>
                 <q-list dense class="achievements-list">
-                  <q-item
-                    v-for="(achievement, idx) in job.achievements"
-                    :key="idx"
-                    class="q-px-none"
-                  >
+                  <q-item v-for="(achievement, idx) in job.achievements" :key="idx" class="q-px-none">
                     <q-item-section avatar style="min-width: 30px;">
                       <q-icon name="check_circle" size="16px" class="text-positive" />
                     </q-item-section>
@@ -75,21 +54,9 @@
               <div class="q-mb-sm">
                 <div class="text-caption text-grey-5 q-mb-xs">Tecnologias utilizadas</div>
                 <div class="row q-gutter-xs">
-                  <q-chip
-                    v-for="tech in job.technologies"
-                    :key="tech.name"
-                    dense
-                    :color="tech.color"
-                    text-color="white"
-                    size="sm"
-                    class="tech-chip"
-                  >
-                    <q-icon
-                      v-if="tech.icon"
-                      :name="tech.icon"
-                      size="14px"
-                      class="q-mr-xs"
-                    />
+                  <q-chip v-for="tech in job.technologies" :key="tech.name" dense :color="tech.color" text-color="white"
+                    size="sm" class="tech-chip">
+                    <q-icon v-if="tech.icon" :name="tech.icon" size="14px" class="q-mr-xs" />
                     {{ tech.name }}
                   </q-chip>
                 </div>
@@ -97,15 +64,9 @@
 
               <!-- Expand/Collapse button -->
               <div class="text-center q-mt-md" v-if="job.achievements.length > 0">
-                <q-btn
-                  flat
-                  dense
-                  size="sm"
-                  :label="expandedCards[index] ? 'Ver menos' : 'Ver mais detalhes'"
-                  :icon-right="expandedCards[index] ? 'expand_less' : 'expand_more'"
-                  color="primary"
-                  @click="toggleCard(index)"
-                />
+                <q-btn flat dense size="sm" :label="expandedCards[index] ? 'Ver menos' : 'Ver mais detalhes'"
+                  :icon-right="expandedCards[index] ? 'expand_less' : 'expand_more'" color="primary"
+                  @click="toggleCard(index)" />
               </div>
             </q-card-section>
           </q-card>
@@ -204,36 +165,37 @@ const toggleCard = (index: number) => {
 
 const jobs = [
   {
-    title: 'Desenvolvedor Full Stack',
+    title: 'Fullstack Developer',
     company: 'Claro',
-    period: '2025',
+    period: 'Abr/2025',
     current: true,
     icon: 'code',
     color: 'red-8',
     description: 'Desenvolvimento e modernização do sistema legado de incidentes, com foco em automações, web scraping e processamento assíncrono de grandes volumes de dados regulatórios de telecomunicações.',
     achievements: [
       'Desenvolvi sistema de web scraping robusto para extração automática de dados de sistema legado, com tratamento inteligente de sessões e timeouts',
-      'Implementei arquitetura de jobs em fila (Laravel Queues + Redis) para processamento assíncrono de até 10.000+ registros simultâneos',
+      'Implementei arquitetura de jobs em fila com Redis para processamento assíncrono de até 10.000+ registros simultâneos',
       'Criei sistema de gerenciamento de sessões com auto-renovação e tratamento de expiração, reduzindo falhas em 95%',
       'Implementei dashboard em Vue.js com tabelas dinâmicas, paginação server-side, filtros avançados e gráficos ApexCharts para visualização de dados regulatórios',
       'Desenvolvi sistema de logs estruturados e monitoramento em tempo real de processos críticos com alertas automáticos',
       'Otimizei queries MySQL complexas, reduzindo tempo de processamento de relatórios de 5min para 30s',
     ],
     technologies: [
-      { name: 'Laravel 7', color: 'red-8', icon: null },
-      { name: 'Vue.js 3', color: 'green-7', icon: null },
+      { name: 'PHP / Laravel', color: 'red-8', icon: null },
+      { name: 'Vue.js', color: 'green-7', icon: null },
       { name: 'PHP 7.4', color: 'purple-7', icon: null },
       { name: 'Redis/Queues', color: 'red-7', icon: null },
       { name: 'Web Scraping', color: 'grey-7', icon: null },
-      { name: 'MySQL', color: 'blue-8', icon: null },
-      { name: 'ApexCharts', color: 'orange-7', icon: null },
-      { name: 'Composer', color: 'yellow-9', icon: null },
+      { name: 'MySQL', color: 'blue-5', icon: null },
+      { name: 'Azure Devops', color: 'blue-9', icon: null },
+      { name: 'Jenkins', color: 'yellow-9', icon: null },
+      { name: 'Kafka', color: 'cyan-8', icon: null },
     ]
   },
   {
     title: 'Fullstack Developer',
     company: 'BetSolve',
-    period: '2025 (Part-time)',
+    period: 'Jun/2025 - Ago/2025 (Part-time)',
     current: false,
     icon: 'sports_esports',
     color: 'green-7',
@@ -248,45 +210,46 @@ const jobs = [
       'Implementei boas práticas de segurança seguindo diretrizes OWASP'
     ],
     technologies: [
-      { name: 'Laravel 11', color: 'red-8', icon: null },
+      { name: 'NodeJs', color: 'green-9', icon: null },
+      { name: 'PHP / Laravel', color: 'red-8', icon: null },
       { name: 'Lúmen', color: 'red-6', icon: null },
-      { name: 'PHP 8.2', color: 'purple-7', icon: null },
+      { name: 'WebSockets', color: 'purple-7', icon: null },
       { name: 'Alpine', color: 'orange-6', icon: null },
-      { name: 'React', color: 'blue-8', icon: null },
-      { name: 'Vue.js', color: 'green-7', icon: null },
+      { name: 'NextJs', color: 'blue-8', icon: null },
       { name: 'MySql', color: 'blue-7', icon: null },
       { name: 'Redis', color: 'red-7', icon: null },
       { name: 'Payment APIs', color: 'green-8', icon: null }
     ]
   },
-  {
-    title: 'Full Stack Developer',
-    company: 'Attimo Soluções',
-    period: '2024 - 2025 (Part-time)',
-    current: false,
-    icon: 'work',
-    color: 'primary',
-    description: 'Desenvolvimento e manutenção de sistemas fiscais complexos com Laravel + Vue.js. Implementação de emissão de NFe/NFC-e com integrações SEFAZ, gerenciamento de certificados digitais, multi-tenancy e painéis administrativos robustos.',
-    achievements: [
-      'Implementei sistema completo de emissão de NFe/NFC-e com integrações SEFAZ para múltiplos estados',
-      'Desenvolvi arquitetura multi-empresa com isolamento de dados e gestão de contexto',
-      'Criei sistema de importação automática de produtos com validações e tratamento de erros',
-      'Implementei gestão de certificados digitais A1 e A3 com renovação automática',
-      'Otimizei queries complexas reduzindo tempo de resposta em 60%'
-    ],
-    technologies: [
-      { name: 'Laravel', color: 'red-8', icon: null },
-      { name: 'Vue.js', color: 'green-7', icon: null },
-      { name: 'Filament', color: 'orange-7', icon: null },
-      { name: 'PostgreSQL', color: 'blue-7', icon: null },
-      { name: 'Redis', color: 'red-7', icon: null },
-      { name: 'Docker', color: 'blue-6', icon: null }
-    ]
-  },
+  // {
+  //   title: 'Full Stack Developer',
+  //   company: 'Attimo Soluções',
+  //   period: '2024 - 2025 (Part-time)',
+  //   current: false,
+  //   icon: 'work',
+  //   color: 'primary',
+  //   description: 'Desenvolvimento e manutenção de sistemas fiscais complexos com arquitetura backend e frontend moderno. Implementação de emissão de NFe/NFC-e com integrações fiscais, gerenciamento de certificados digitais, multi-tenancy e painéis administrativos robustos.',
+  //   achievements: [
+  //     'Implementei sistema completo de emissão de NFe/NFC-e com integrações fiscais para múltiplos estados',
+  //     'Desenvolvi arquitetura multi-empresa com isolamento de dados e gestão de contexto',
+  //     'Criei sistema de importação automática de produtos com validações e tratamento de erros',
+  //     'Implementei gestão de certificados digitais A1 e A3 com renovação automática',
+  //     'Otimizei queries complexas reduzindo tempo de resposta em 60%'
+  //   ],
+  //   technologies: [
+  //     { name: 'PHP / Laravel', color: 'red-8', icon: null },
+  //     { name: 'Filament', color: 'orange-7', icon: null },
+  //     { name: 'MySql', color: 'blue-7', icon: null },
+  //     { name: 'Integração SEFAZ', color: 'red-5', icon: null },
+  //     { name: 'APIs Terceiros', color: 'green-7', icon: null },
+  //     { name: 'Soap', color: 'brown-8', icon: null },
+  //     { name: 'Docker', color: 'blue-6', icon: null }
+  //   ]
+  // },
   {
     title: 'Full Stack Developer',
     company: 'ProScore',
-    period: 'Ago/2024 - Set/2025',
+    period: 'Ago/2024 - Abr/2025',
     current: false,
     icon: 'speed',
     color: 'orange-7',
@@ -296,7 +259,7 @@ const jobs = [
     achievements: [
       'Implementei integração com Pagarme, Neurotech, Sendgrid e outras APIs de terceiros',
       'Utilizei API do Banco do Brasil para emissão de boletos com validações e gestão de vencimentos',
-      'Criei e mantive lógica complexa de negócio no backend com Laravel: ' +
+      'Criei e mantive lógica complexa de negócio no backend com PHP / Laravel: ' +
       'Cálculo de juros, parcelas e lógica para financiamento de veículos',
       'Automatizei funcionalidades para facilitar o uso do sistema: ' +
       'Validação de regras personalizadas para aprovação ou recusa de crédito',
@@ -306,13 +269,13 @@ const jobs = [
       'Refatorei código legado seguindo princípios SOLID'
     ],
     technologies: [
-      { name: 'Laravel', color: 'red-8', icon: null },
+      { name: 'PHP / Laravel', color: 'red-8', icon: null },
+      { name: 'Silex', color: 'orange', icon: null },
       { name: 'jQuery', color: 'blue-7', icon: null },
       { name: 'Ajax', color: 'orange-7', icon: null },
       { name: 'Bootstrap', color: 'purple-7', icon: null },
       { name: 'APIs Terceiros', color: 'green-7', icon: null },
       { name: 'MySQL', color: 'blue-8', icon: null },
-      { name: 'Redis', color: 'red-7', icon: null },
       { name: 'Bitbucket', color: 'blue-4', icon: null },
     ]
   },
@@ -323,7 +286,7 @@ const jobs = [
     current: false,
     icon: 'api',
     color: 'blue-7',
-    description: 'Desenvolvimento backend para aplicativos mobile com Laravel. Criação de APIs REST documentadas com Swagger, implementação de cronjobs, listeners para automação e sistema de notificações em tempo real. Trabalho em sprints ágeis com foco em qualidade.',
+    description: 'Desenvolvimento backend para aplicativos mobile com PHP / Laravel. Criação de APIs REST documentadas com Swagger, implementação de cronjobs, listeners para automação e sistema de notificações em tempo real. Trabalho em sprints ágeis com foco em qualidade.',
     achievements: [
       'Desenvolvi APIs REST completas documentadas com Swagger/OpenAPI',
       'Implementei sistema de notificações push em tempo real',
@@ -332,13 +295,14 @@ const jobs = [
       'Participei ativamente de code reviews e pair programming'
     ],
     technologies: [
-      { name: 'Laravel', color: 'red-8', icon: null },
+      { name: 'PHP / Laravel', color: 'red-8', icon: null },
       { name: 'APIs REST', color: 'blue-7', icon: null },
       { name: 'Swagger', color: 'green-8', icon: null },
       { name: 'MySQL', color: 'blue-8', icon: null },
       { name: 'JWT', color: 'purple-7', icon: null },
       { name: 'JIRA', color: 'blue-6', icon: null },
-      { name: 'Payment APIs', color: 'green-8', icon: null }
+      { name: 'MongoDB', color: 'green-8', icon: null },
+      { name: 'Payment APIs', color: 'orange-8', icon: null },
     ]
   },
   {
@@ -405,7 +369,6 @@ const softSkills = [
 ]
 
 const domainSkills = [
-  'Sistemas fiscais',
   'Plataformas transacionais',
   'E-commerce e pagamentos',
   'Automação e web scraping',
@@ -440,9 +403,12 @@ const domainSkills = [
 }
 
 @keyframes pulse {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0.5;
   }
